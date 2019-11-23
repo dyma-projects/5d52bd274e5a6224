@@ -1,9 +1,12 @@
 <br />
-<span> valeur du compteur : </span>
+<span> Valeur du compteur au chargement de la page : <strong> <span class="text-danger">{{ getCounterInit() }} </span></strong></span>
 <br />
 <br />
-<button> + </button>
+<button (click)="increment(event)" > + </button>
 <br />
 <br />
-<button> - </button>
+<button (click)="decrement(event)" > - </button>
+<br />
+<br />
+<a href="/" class="btn btn-danger">Clic sur ce bouton pour recharger la page</a>
 <br>

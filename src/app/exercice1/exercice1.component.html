@@ -1,8 +1,18 @@
-<br/>
-<br/>
-<br/>
-<h3>Exercice 1 : mise en place de Output et Input </h3>
-<app-exercice1-enfant></app-exercice1-enfant>
-<br/>
-<span> compteur : {{ result }}</span>
+<h3 class="mt-5">Exercice 1 : mise en place de Output et Input </h3>
+
+<app-exercice1-enfant [counterInit]="counterStart" (updateCounter)="updateCounterFinal($event)"></app-exercice1-enfant>
+<br />
+<div class="alert alert-success">
+    Résultat affiché en fonction d'une incrémentation ou d'une décrémentation :
+    <strong>
+        <span class="text-danger">{{ resultat }}</span>
+    </strong>
+</div>
+<div class="alert alert-danger">
+    <strong>
+        /!\ Information /!\<br />
+        Je ne sais pas comment fixer le compteur sur la valeur de départ afin qu'il ne s'incrémente pas...<br />
+        Franchement ça m'agace.... 
+    </strong>
+</div>
 <hr>

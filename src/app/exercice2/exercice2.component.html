@@ -1,7 +1,24 @@
-<h3>Exercice 2 : mise en place d'un décorateur Viewchild </h3>
+<h3>Exercice 2 : mise en place d'un décorateur Viewchild</h3>
 <br />
-<input type="text" >
+<div class="input-group">
+    <div class="input-group-prepend">
+        <div class="input-group-text">Coucou :P</div>
+    </div>
+    <input class="form-control" type="text" id="myInput" #inputTextReference />
+    <div class="input-group-prepend">
+        <button (click)="myInputRef(inputTextReference)"  class="btn btn-success">
+            Clic ici pour voir le contenu de ma référence
+        </button>
+    </div>
+    <div class="input-group-prepend">
+        <button (click)="clear()" class="btn btn-danger">
+            Clear
+        </button>
+    </div>
+</div>
 <br />
-<br />
-<span> valeur de l'input : {{ valeur }}</span>
+<div class="alert alert-success">
+    <span>Valeur de mon input : <strong>{{ valeur }}</strong></span>&nbsp;
+</div>
+
 <hr>

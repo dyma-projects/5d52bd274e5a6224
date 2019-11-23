@@ -6,11 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./exercice1.component.css']
 })
 export class Exercice1Component implements OnInit {
-  public compteur: number = 0; 
+  
+  // Définition ici du compteur qui sera passé à l'enfant.
+  // NON INITILISER ICI.
+  public counterStart: number;
 
-  constructor() { }
-
-  ngOnInit() {
+  // Résultat permettant d'afficher uniquement le résultat final.
+  public resultat;
+  
+  ngOnInit() {}
+  
+  updateCounterFinal(event) {
+    console.log(event.counterValue);
+    this.resultat = event.counterValue
   }
-
 }
